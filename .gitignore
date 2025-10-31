@@ -1,0 +1,43 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# PyCharm / VSCode / IDE files
+.idea/
+.vscode/
+*.iml
+
+# Data files (optional, if large)
+data/
+datasets/
+*.tsv
+*.npz
+
+# Model checkpoints / outputs
+models/
+checkpoints/
+*.ckpt
+*.pt
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python distribution / packaging
+build/
+dist/
+*.egg-info/
