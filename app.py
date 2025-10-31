@@ -71,14 +71,14 @@ def user_input_features():
     )
 
     fc = st.sidebar.slider('Front Camera (MP)', 0, 20, 5)
-    int_memory = st.sidebar.slider('Internal Memory (GB)', 2, 64, 32)
+    int_memory = st.sidebar.slider('Internal Memory (GB)', 32, 64, 128)
     m_dep = st.sidebar.slider('Mobile Depth (cm)', 0.1, 1.0, 0.5, 0.1)
     mobile_wt = st.sidebar.slider('Mobile Weight (g)', 80, 200, 140)
     n_cores = st.sidebar.slider('Number of Cores', 1, 8, 4)
-    pc = st.sidebar.slider('Primary Camera (MP)', 0, 21, 10)
+    pc = st.sidebar.slider('Primary Camera (MP)', 2, 8, 50)
     px_height = st.sidebar.slider('Pixel Resolution Height', 0, 1960, 640)
     px_width = st.sidebar.slider('Pixel Resolution Width', 0, 1988, 1280)
-    ram = st.sidebar.slider('RAM (MB)', 256, 4096, 2048)
+    ram = st.sidebar.slider('RAM (GB)', 6, 8,16 )
     sc_h = st.sidebar.slider('Screen Height (cm)', 5, 19, 12)
     sc_w = st.sidebar.slider('Screen Width (cm)', 0, 18, 5)
 
@@ -136,4 +136,5 @@ if model and scaler:
             st.subheader('Prediction Probabilities')
             proba_df = pd.DataFrame(prediction_proba, columns=price_range_map.values())
             st.write(proba_df)
+
             
